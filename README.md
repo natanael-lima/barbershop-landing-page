@@ -1,23 +1,18 @@
-# Barbershop Landing Page
+# Barbería Landing Page
 ## Descripción
 
-Una aplicación para gestionar reservas de habitaciones en hoteles. Permite a los usuarios ver la disponibilidad de habitaciones, realizar y cancelar reservas, y gestionar tarifas. Además, incluye un sistema de reseñas y valoraciones y se integra con pasarelas de pago.
+Una landing page diseñada para mostrar los trabajos realizados por la barbería y permitir a los usuarios reservar citas de manera sencilla a través de WhatsApp. La página ofrece una interfaz visual atractiva con imágenes de cortes, estilos, y servicios disponibles.
 
 ## Funcionalidades
 
-- **Registro y autenticación de usuarios**: Los usuarios pueden registrarse, iniciar sesión y gestionar sus perfiles.
-- **Búsqueda y visualización de hoteles y habitaciones**: Permite buscar hoteles y habitaciones disponibles y visualizar sus detalles.
-- **Reserva y cancelación de habitaciones**: Facilita la reserva de habitaciones y su posterior cancelación si es necesario.
-- **Gestión de tarifas y disponibilidad**: Administra las tarifas de las habitaciones y su disponibilidad en tiempo real.
-- **Sistema de reseñas y valoraciones**: Los usuarios pueden dejar reseñas y valoraciones sobre los hoteles y habitaciones.
-- **Integración con pasarelas de pago**: Utiliza la API de Mercado Pago para procesar los pagos de las reservas.
+- **Visualización de trabajos realizados**: Muestra una galería de imágenes de cortes y estilos realizados por la barbería.
+- **Reserva a través de WhatsApp**: Los usuarios pueden reservar citas directamente a través de la API de WhatsApp con un solo clic.
+- **Información de contacto**: Sección con la dirección, teléfono, y horarios de la barbería para facilitar el contacto.
 
 ## Tecnologías
 
-- **Backend**: Spring Boot + JWT + Spring Security + JPA + JAVA
-- **Frontend**: React + Vite + TypeScript + Tailwind CSS
-- **Base de Datos**: PostgreSQL
-- **Pasarela de Pago**: Mercado Pago API + Stripe API
+- **Frontend**: Next.js + Tailwind CSS + TypeScript
+- **API de Mensajería**: Integración con la API de WhatsApp para la reserva de citas.
 
 ## Clonar el Repositorio
 
@@ -26,32 +21,19 @@ Para clonar este repositorio y comenzar a trabajar con el sistema de reservas de
 1. Clona el repositorio usando el siguiente comando:
 
    ```bash
-   git clone https://github.com/natanael-lima/hotel-reservation-system.git
+   git clone https://github.com/natanael-lima/barbershop-landing-page.git
    ```
 
 2. Navega al directorio del proyecto:
 
    ```bash
-   cd hotel-reservation-system
+   cd barbershop-landing-page
    ```
-
-3. **Configuración del Backend**:
-
-   - Asegúrate de tener [Spring Boot](https://spring.io/projects/spring-boot) instalado.
-   - Configura tu archivo `application.properties` con las credenciales de la base de datos y las credenciales de la API de Mercado Pago.
-
-
-
-
-## Vista Previa Diagrama
-
-Puedes ver una vista del Diagrama de Entidad-Relación (ER o MER). [![db-hotel.png](https://i.postimg.cc/CMbTmSvT/db-hotel.png)](https://postimg.cc/Lh4bsKKN)
 
 ## Vista Previa
 
 Puedes ver una vista previa del proyecto. [![project-hotel-system.jpg](https://i.postimg.cc/yx8G1Czn/project-hotel-system.jpg)](https://postimg.cc/hzNsswv7)
 
-Con estos pasos, deberías estar listo para empezar a trabajar con la aplicación de reservas de hoteles. Si tienes alguna pregunta o encuentras algún problema, consulta la documentación del proyecto o contacta con el equipo de soporte.
 
 ## Realizado por
 
