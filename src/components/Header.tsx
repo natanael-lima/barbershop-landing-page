@@ -1,104 +1,98 @@
 "use client"
 
-import React from 'react'
-import { FaHome, FaCut, FaUserFriends, FaImages, FaEnvelope } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react'
+import { HiMenuAlt3 } from "react-icons/hi";
+import { IoMdClose } from "react-icons/io";
+import { FaCut } from "react-icons/fa";
 
-function Header() {
+export default function Header() {
+  /*const [scrolled, setScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // Cambia el valor según sea necesario
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };*/
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-<header className=" text-black">
-      <div className="container mx-auto flex justify-between items-center px-4 py-4">
-        {/* Logo */}
-        <div className="text-2xl font-bold">
-          <a href="/" className="hover:text-gray-400">
-            Logo
-          </a>
-        </div>
+    <header className="text-black">
+    <div className="container mx-auto flex justify-between items-center px-4 py-4">
+      {/* Logo */}
+      <div className="text-2xl font-bold ">
+        <a href="/" className="text-stone-800 hover:text-stone-600 flex items-center justify-center"><FaCut className="text-1xl" /> FlowN</a>
+      </div>
 
-        {/* Navegación */}
-        <nav className="hidden md:flex space-x-8">
+      {/* Desktop Navigation */}
+      <nav className="hidden md:flex space-x-8">
+        <a href="#home" className="flex items-center hover:text-stone-500">
+          Home
+        </a>
+        <a href="#services" className="flex items-center hover:text-stone-500">
+          Services
+        </a>
+        <a href="#team" className="flex items-center hover:text-stone-500">
+          Team
+        </a>
+        <a href="#gallery" className="flex items-center hover:text-stone-500">
+          About
+        </a>
+        <a href="#contact" className="flex items-center hover:text-stone-500">
+          Contact
+        </a>
+      </nav>
+
+      {/* Contact Button */}
+      <div className="hidden md:block">
+        <a
+          href="#contact"
+          className="bg-stone-800 rounded-lg hover:bg-stone-600 text-white font-semibold py-2 px-4  transition duration-300"
+        >
+          Contact Us
+        </a>
+      </div>
+
+      {/* Mobile Menu Button */}
+      <div className="md:hidden">
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="text-black focus:outline-none"
+        >
+          {menuOpen ? (
+            <IoMdClose className="text-2xl" />
+          ) : (
+            <HiMenuAlt3 className="text-2xl" />
+          )}
+        </button>
+      </div>
+    </div>
+
+    {/* Mobile Menu */}
+    {menuOpen && (
+      <div className="md:hidden text-black">
+        <nav className="flex flex-col space-y-4 py-4 px-4">
           <a href="#home" className="flex items-center hover:text-gray-400">
-            <FaHome className="mr-1" />
             Home
           </a>
           <a href="#services" className="flex items-center hover:text-gray-400">
-            <FaCut className="mr-1" />
             Services
           </a>
           <a href="#team" className="flex items-center hover:text-gray-400">
-            <FaUserFriends className="mr-1" />
             Team
           </a>
           <a href="#gallery" className="flex items-center hover:text-gray-400">
-            <FaImages className="mr-1" />
             About
           </a>
           <a href="#contact" className="flex items-center hover:text-gray-400">
-            <FaEnvelope className="mr-1" />
-            Contact
-          </a>
-        </nav>
-
-        {/* Botón de contacto */}
-        <div>
-          <a
-            href="#contact"
-            className="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded transition duration-300"
-          >
-            Contact Us
-          </a>
-        </div>
-
-        {/* Menú móvil */}
-        <div className="md:hidden">
-          <button
-            id="menu-toggle"
-            className="text-white focus:outline-none"
-            onClick={() => {
-              const menu = document.getElementById("mobile-menu");
-              if (menu) {
-                menu.classList.toggle("hidden");
-              }
-            }}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      {/* Menú móvil */}
-      <div id="mobile-menu" className="hidden md:hidden bg-gray-800">
-        <nav className="flex flex-col space-y-4 py-4 px-4">
-          <a href="#home" className="flex items-center hover:text-gray-400">
-            <FaHome className="mr-1" />
-            Home
-          </a>
-          <a href="#services" className="flex items-center hover:text-gray-400">
-            <FaCut className="mr-1" />
-            Services
-          </a>
-          <a href="#team" className="flex items-center hover:text-gray-400">
-            <FaUserFriends className="mr-1" />
-            Our Team
-          </a>
-          <a href="#gallery" className="flex items-center hover:text-gray-400">
-            <FaImages className="mr-1" />
-            Gallery
-          </a>
-          <a href="#contact" className="flex items-center hover:text-gray-400">
-            <FaEnvelope className="mr-1" />
             Contact
           </a>
           <div>
@@ -111,8 +105,8 @@ function Header() {
           </div>
         </nav>
       </div>
-    </header>
+    )}
+  </header>
   )
 }
 
-export default Header

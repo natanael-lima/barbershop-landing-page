@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ /* Slider animation */
+ .animate-slide {
+  animation: slide 15s linear infinite;
+}
+
+/* Keyframes for smooth sliding */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pause animation and zoom when hovering */
+#slider:hover {
+  animation-play-state: paused;
+}
