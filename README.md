@@ -1,5 +1,4 @@
-# Sistema de Reservas de Hoteles
-
+# Barbershop Landing Page
 ## Descripción
 
 Una aplicación para gestionar reservas de habitaciones en hoteles. Permite a los usuarios ver la disponibilidad de habitaciones, realizar y cancelar reservas, y gestionar tarifas. Además, incluye un sistema de reseñas y valoraciones y se integra con pasarelas de pago.
@@ -41,35 +40,9 @@ Para clonar este repositorio y comenzar a trabajar con el sistema de reservas de
    - Asegúrate de tener [Spring Boot](https://spring.io/projects/spring-boot) instalado.
    - Configura tu archivo `application.properties` con las credenciales de la base de datos y las credenciales de la API de Mercado Pago.
 
-4. **Configuración del Frontend**:
 
-   - Asegúrate de tener [Node.js](https://nodejs.org/) y [Yarn](https://classic.yarnpkg.com/) instalados.
-   - Instala las dependencias del frontend:
 
-     ```bash
-     cd frontend
-     yarn install
-     ```
 
-   - Inicia el servidor de desarrollo:
-
-     ```bash
-     yarn dev
-     ```
-
-5. **Base de Datos**:
-
-   - Asegúrate de tener [PostgreSQL](https://www.postgresql.org/) instalado y en funcionamiento.
-   - Configura la base de datos y aplica las migraciones necesarias.
-
-6. **Iniciar el Backend**:
-
-   - Navega al directorio del backend y ejecuta la aplicación:
-
-     ```bash
-     cd backend
-     ./mvnw spring-boot:run
-     ```
 ## Vista Previa Diagrama
 
 Puedes ver una vista del Diagrama de Entidad-Relación (ER o MER). [![db-hotel.png](https://i.postimg.cc/CMbTmSvT/db-hotel.png)](https://postimg.cc/Lh4bsKKN)
@@ -80,11 +53,6 @@ Puedes ver una vista previa del proyecto. [![project-hotel-system.jpg](https://i
 
 Con estos pasos, deberías estar listo para empezar a trabajar con la aplicación de reservas de hoteles. Si tienes alguna pregunta o encuentras algún problema, consulta la documentación del proyecto o contacta con el equipo de soporte.
 
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
-
 ## Realizado por
 
 - [Natanael Lima](https://github.com/natanael-lima)
-- [Maximiliano Gaitan](https://github.com/maxi1103)
