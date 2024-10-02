@@ -21,7 +21,6 @@ export default function Slider() {
                 <span className='text-stone-200'>Sunday: Closed</span>
                 <GiPolarStar className="text-stone-200 mr-3 ml-3" />
                 <FaCalendar className="text-stone-200 mr-1" />
-                <GiPolarStar className="text-stone-200 mr-3 ml-3" />
                 <h3 className="text-stone-200 font-semibold">Special Days</h3>
                 <GiPolarStar className="text-stone-200 mr-3 ml-3" />
                 <span className='text-stone-200'>1st Monday: Senior Discount</span>
@@ -46,7 +45,6 @@ export default function Slider() {
                 <span className='text-stone-200'>Sunday: Closed</span>
                 <GiPolarStar className="text-stone-200 mr-3 ml-3" />
                 <FaCalendar className="text-stone-200 mr-1" />
-                <GiPolarStar className="text-stone-200 mr-3 ml-3" />
                 <h3 className="text-stone-200 font-semibold">Special Days</h3>
                 <GiPolarStar className="text-stone-200 mr-3 ml-3" />
                 <span className='text-stone-200'>1st Monday: Senior Discount</span>
