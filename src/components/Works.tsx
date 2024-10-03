@@ -12,7 +12,7 @@ const services = [
   { id: 6,image:"https://haircutday.com/b/wp-content/uploads/2024/01/Diseno-sin-titulo32-300x300.png", name: 'Kids Haircut', price: '$20', description: 'Haircuts for children' },
 ]
 
-export default function Service() {
+export default function Works() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const getVisibleCards = () => {

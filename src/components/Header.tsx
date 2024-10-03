@@ -30,35 +30,35 @@ export default function Header() {
   
 
   return (
-    <header className="text-black">
+    <header className="text-black bg-stone-800 rounded-lg">
     <div className="container mx-auto flex justify-between items-center px-4 py-4">
       {/* Logo */}
       <div className="text-2xl font-bold ">
-        <a href="/" className="text-stone-800 hover:text-stone-600 flex items-center justify-center"><FaCut className="text-1xl" /> FlowN</a>
+        <a href="/" className="text-stone-300 hover:text-stone-200 flex items-center justify-center"><FaCut className="text-1xl" /> FlowN</a>
       </div>
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex space-x-8">
-        <a href="#home" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-stone-500 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-500">
+        <a href="#home" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] text-stone-300 after:bg-stone-200 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-200">
           Home
         </a>
-        <a href="#services" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-stone-500 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-500">
+        <a href="#services" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] text-stone-300 after:bg-stone-200 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-200">
           Services
         </a>
-        <a href="#team" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-stone-500 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-500">
-          Team
+        <a href="#team" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] text-stone-300 after:bg-stone-200 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-200">
+          Works
         </a>
-        <a href="#gallery" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-stone-500 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-500">
-          About
+        <a href="#gallery" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] text-stone-300 after:bg-stone-200 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-200">
+          About us
         </a>
-        <a href="#contact" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-stone-500 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-500">
+        <a href="#contact" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] text-stone-300 after:bg-stone-200 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-200">
           Contact
         </a>
       </nav>
 
       {/* Contact Button */}
       <div className="hidden md:block">
-        <button onClick={openModal} className="bg-stone-800 rounded-lg hover:bg-stone-600 text-white font-semibold py-2 px-4  transition duration-300">Reserve</button>
+        <button onClick={openModal} className="bg-stone-300 rounded-lg hover:bg-stone-200 text-stone-800 font-semibold py-2 px-4  transition duration-300">Reserve</button>
 
         {/* Render the modal only if it's open */}
         {isModalOpen && (
@@ -70,7 +70,7 @@ export default function Header() {
       <div className="md:hidden">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="text-black focus:outline-none"
+          className="text-stone-300 focus:outline-none"
         >
           {menuOpen ? (
             <IoMdClose className="text-2xl" />
@@ -85,25 +85,25 @@ export default function Header() {
     {menuOpen && (
       <div className="md:hidden text-black">
         <nav className="flex flex-col space-y-4 py-4 px-4">
-          <a href="#home" className="flex items-center hover:text-gray-400">
+          <a href="#home" className="flex items-center text-stone-300 hover:text-stone-200">
             Home
           </a>
-          <a href="#services" className="flex items-center hover:text-gray-400">
+          <a href="#services" className="flex items-center text-stone-300 hover:text-stone-200">
             Services
           </a>
-          <a href="#team" className="flex items-center hover:text-gray-400">
+          <a href="#team" className="flex items-center text-stone-300 hover:text-stone-200">
             Team
           </a>
-          <a href="#gallery" className="flex items-center hover:text-gray-400">
+          <a href="#gallery" className="flex items-center text-stone-300 hover:text-stone-200">
             About
           </a>
-          <a href="#contact" className="flex items-center hover:text-gray-400">
+          <a href="#contact" className="flex items-center text-stone-300 hover:text-stone-200">
             Contact
           </a>
           <div>
             <button
               onClick={openModal}
-              className="block bg-stone-800 hhover:bg-stone-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300  text-center">
+              className="block bg-stone-200 hover:bg-stone-600 text-stone-800 font-semibold py-2 px-4 rounded-lg transition duration-300  text-center">
               Reserve
             </button>
              {/* Render the modal only if it's open */}
