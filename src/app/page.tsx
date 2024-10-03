@@ -5,7 +5,7 @@ import About from "@/components/About";
 import Slider from "@/components/Slider";
 import Contact from "@/components/Contact";
 import Services from "@/components/Services";
-import Works from "@/components/Works";
+
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
           <Hero/>
           <Slider/>
           <Services/>
-          <Works/>
+          
           <About/>
           <Contact/>
         </main>

@@ -1,4 +1,4 @@
-/*"use client"; // Indica que este componente solo debe ejecutarse en el cliente
+"use client"; // Indica que este componente solo debe ejecutarse en el cliente
 import React, { useEffect, useState } from 'react';
 
 interface ModalProps {
@@ -166,7 +166,7 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
           <button
             type="submit"
             onClick={handleSubmit}
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+            className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700"
           >
             Confirmar Reserva
           </button>
@@ -174,4 +174,4 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
       </div>
     </div>
   )
-}*/
+}

@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import { FaCut } from "react-icons/fa";
-import Form from './Form';
+import Form from './WhatsAppForm';
 
 
 export default function Header() {
