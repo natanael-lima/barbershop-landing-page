@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import { FaCut } from "react-icons/fa";
+import WhatsAppForm from './WhatsAppForm';
 
 export default function Header() {
   /*const [scrolled, setScrolled] = useState<boolean>(false);
@@ -21,8 +22,12 @@ export default function Header() {
   const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
   };*/
-
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+  
 
   return (
     <header className="text-black">
@@ -34,31 +39,31 @@ export default function Header() {
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex space-x-8">
-        <a href="#home" className="flex items-center hover:text-stone-500">
+        <a href="#home" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-stone-500 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-500">
           Home
         </a>
-        <a href="#services" className="flex items-center hover:text-stone-500">
+        <a href="#services" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-stone-500 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-500">
           Services
         </a>
-        <a href="#team" className="flex items-center hover:text-stone-500">
+        <a href="#team" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-stone-500 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-500">
           Team
         </a>
-        <a href="#gallery" className="flex items-center hover:text-stone-500">
+        <a href="#gallery" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-stone-500 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-500">
           About
         </a>
-        <a href="#contact" className="flex items-center hover:text-stone-500">
+        <a href="#contact" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-stone-500 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-500">
           Contact
         </a>
       </nav>
 
       {/* Contact Button */}
       <div className="hidden md:block">
-        <a
-          href="#contact"
-          className="bg-stone-800 rounded-lg hover:bg-stone-600 text-white font-semibold py-2 px-4  transition duration-300"
-        >
-          Contact Us
-        </a>
+        <button onClick={openModal} className="z-10 bg-stone-800 rounded-lg hover:bg-stone-600 text-white font-semibold py-2 px-4  transition duration-300">Reserve</button>
+
+        {/* Render the modal only if it's open */}
+        {isModalOpen && (
+              <WhatsAppForm isOpen={isModalOpen} closeModal={closeModal} />
+            )}
       </div>
 
       {/* Mobile Menu Button */}
