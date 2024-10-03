@@ -27,19 +27,22 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     
-    // URL encode message for proper WhatsApp URL format
-    const message = `Hola, mi nombre es ${encodeURIComponent(formData.name)}. Mi correo es ${encodeURIComponent(formData.email)}. 
-    Mi consulta es: ${encodeURIComponent(formData.message)}. 
-    Fecha de reserva: ${encodeURIComponent(formData.date)}, 
-    Hora: ${encodeURIComponent(formData.time)}, 
-    Método de pago: ${encodeURIComponent(formData.paymentMethod)}`;
-    
-    // Construct WhatsApp URL with the message
-    const whatsappUrl = `https://wa.me/5493884670317?text=${message}`;
-    
-    // Redirect to WhatsApp chat
-    window.open(whatsappUrl, '_blank');
-    closeModal(); // Cierra el modal después de enviar
+    // Verificar si estamos en el lado del cliente
+    if (typeof window !== 'undefined') {
+      // Codificar el mensaje
+      const message = `Hola, mi nombre es ${encodeURIComponent(formData.name)}. Mi correo es ${encodeURIComponent(formData.email)}. 
+      Mi consulta es: ${encodeURIComponent(formData.message)}. 
+      Fecha de reserva: ${encodeURIComponent(formData.date)}, 
+      Hora: ${encodeURIComponent(formData.time)}, 
+      Método de pago: ${encodeURIComponent(formData.paymentMethod)}`;
+
+      // Construir la URL de WhatsApp
+      const whatsappUrl = `https://wa.me/5493884670317?text=${message}`;
+
+      // Redirigir a WhatsApp chat
+      window.open(whatsappUrl, '_blank');
+      closeModal(); // Cierra el modal después de enviar
+    }
   };
 
   if (!isOpen) return null;
