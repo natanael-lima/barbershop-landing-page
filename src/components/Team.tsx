@@ -45,35 +45,35 @@ export default function Team() {
         {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="relative rounded-lg overflow-hidden w-44 h-56"
+              className="relative rounded-lg overflow-hidden w-44 "
             >
               {/* Imagen del miembro */}
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-cover opacity-80 transition-opacity duration-300 hover:opacity-100"
+                className="w-full h-56 object-cover opacity-80 transition-opacity duration-300 hover:opacity-100"
               />
 
-              {/* Contenido superior izquierdo: Nombre y descripción */}
-              <div className="absolute top-0 left-0 bg-white bg-opacity-95 p-2 rounded-br-lg">
-                <h3 className="text-black text-sm font-semibold">{member.name}</h3>
-                <p className="text-xs text-gray-600">{member.description}</p>
-              </div>
-
-              {/* Íconos de redes sociales en la esquina superior derecha */}
-              <div className="absolute top-0 right-0 flex space-x-2 p-2">
-                <a href={member.social1} target="_blank" rel="noopener noreferrer" className="bg-stone-200 p-0.5 rounded-lg text-gray-700 hover:text-blue-500 transition-colors">
+              {/* Íconos de redes sociales en la parte inferior centrados sobre la imagen */}
+              <div className="absolute top-0 left-0 w-full flex justify-center space-x-3 p-2">
+                <a href={member.social1} target="_blank" rel="noopener noreferrer" className="bg-stone-200 hover:bg-stone-300 p-1 rounded-md text-stone-700  transition-colors">
                   {/* Icono de Facebook */}
                   <i>
                     <FaFacebookF size={16} />
                   </i>
                 </a>
-                <a href={member.social2} target="_blank" rel="noopener noreferrer" className="bg-stone-200 p-0.5 rounded-lg text-gray-700 hover:text-blue-500 transition-colors">
+                <a href={member.social2} target="_blank" rel="noopener noreferrer" className="bg-stone-200 hover:bg-stone-300 p-1 rounded-md text-stone-700  transition-colors">
                   {/* Icono de Instagram */}
                   <i>
                     <FaInstagram size={16} />
                   </i>
                 </a>
+              </div>
+
+              {/* Nombre y descripción debajo de la imagen y centrado */}
+              <div className="mt-1 text-center">
+                <h3 className="text-stone-500 text-sm font-semibold">{member.name}</h3>
+                <p className="text-xs text-gray-600">{member.description}</p>
               </div>
             </div>
           ))}

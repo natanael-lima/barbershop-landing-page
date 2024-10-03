@@ -1,5 +1,5 @@
 "use client"; // Indica que este componente solo debe ejecutarse en el cliente
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 interface ModalProps {
   isOpen: boolean;
@@ -26,31 +26,24 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
   
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+     // Verificar si estamos en el lado del cliente
+     if (typeof window !== 'undefined') {
+      // Codificar el mensaje
+      const message = `Hola, mi nombre es ${encodeURIComponent(formData.name)}.\n\n` +
+      `Mi correo es: ${encodeURIComponent(formData.email)}.\n\n` +
+      `Mi consulta es: ${encodeURIComponent(formData.message)}.\n\n` +
+      `Fecha de reserva: ${encodeURIComponent(formData.date)}.\n\n` +
+      `Hora: ${encodeURIComponent(formData.time)}.\n\n` +
+      `Método de pago: ${encodeURIComponent(formData.paymentMethod)}.`;
+
+      // Construir la URL de WhatsApp
+      const whatsappUrl = `https://wa.me/5493884670317?text=${message}`;
+
+      // Redirigir a WhatsApp chat
+      window.open(whatsappUrl, '_blank');
+      closeModal(); // Cierra el modal después de enviar
+    }
   };
-
-  useEffect(() => {
-      // Verificar si estamos en el lado del cliente
-      if (typeof window !== 'undefined') {
-        // Codificar el mensaje
-        const message = `Hola, mi nombre es ${encodeURIComponent(formData.name)}.\n\n` +
-        `Mi correo es: ${encodeURIComponent(formData.email)}.\n\n` +
-        `Mi consulta es: ${encodeURIComponent(formData.message)}.\n\n` +
-        `Fecha de reserva: ${encodeURIComponent(formData.date)}.\n\n` +
-        `Hora: ${encodeURIComponent(formData.time)}.\n\n` +
-        `Método de pago: ${encodeURIComponent(formData.paymentMethod)}.`;
-
-        // Construir la URL de WhatsApp
-        const whatsappUrl = `https://wa.me/5493884670317?text=${message}`;
-
-        // Redirigir a WhatsApp chat
-        window.open(whatsappUrl, '_blank');
-        closeModal(); // Cierra el modal después de enviar
-      }
-
-  }, [formData]); // Esto asegura que el código solo se ejecute en el cliente
-    
-    
-
 
   if (!isOpen) return null;
 
