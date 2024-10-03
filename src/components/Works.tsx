@@ -1,4 +1,4 @@
-"use client"
+/*"use client"
 
 import React, { useState } from 'react'
 import { FaClock, FaCalendar, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
@@ -32,8 +32,8 @@ const prevSlide = () => {
   return (
     <section className="py-12 rounded-lg">
   <div className="container mx-auto px-4">
-    <div className="flex flex-col md:flex-row justify-center"> {/* Centrar en toda la fila */}
-      {/* Service Carousel */}
+    <div className="flex flex-col md:flex-row justify-center">
+      
       <div className="md:w-2/1 md:pl-2">
         <h2 className="text-4xl font-bold text-center mb-8 ">OUR SERVICES</h2>
         <div className="relative p-6 rounded-lg">
@@ -43,17 +43,17 @@ const prevSlide = () => {
               style={{ transform: `translateX(-${currentIndex * (100 / (getVisibleCards()))}%)` }} // Ajustar el desplazamiento
             >
               {services.map((service) => (
-                <div key={service.id} className="w-full flex-shrink-0 md:w-1/4 sm:w-1/2 px-2 mb-6"> {/* Cambia aquí */}
+                <div key={service.id} className="w-full flex-shrink-0 md:w-1/4 sm:w-1/2 px-2 mb-6"> {
                   <div className="bg-stone-200/80  shadow-md rounded-lg overflow-hidden">
-                    {/* Service Image */}
-                    <div className="relative"> {/* Flexibilidad para la altura */}
+                    
+                    <div className="relative"> 
                       <img 
                         src={service.image} 
                         alt={service.name} 
                         className="object-cover rounded-md w-full h-48" 
                       />
                     </div>
-                    {/* Service Information */}
+                   
                     <div className="p-4 flex flex-col justify-between flex-grow">
                       <h3 className="text-lg font-semibold mb-2 text-stone-600 text-center">{service.name}</h3>
                       <p className="text-stone-400 mb-4 text-center">{service.description}</p>
@@ -65,7 +65,7 @@ const prevSlide = () => {
               ))}
             </div>
           </div>
-          <div className="flex justify-start mt-4 space-x-4"> {/* Centrar los botones de navegación */}
+          <div className="flex justify-start mt-4 space-x-4">
             <button
               onClick={prevSlide}
               className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full"
@@ -87,4 +87,4 @@ const prevSlide = () => {
 
 
   )
-}
+}*/

@@ -1,4 +1,4 @@
-"use client"; // Indica que este componente solo debe ejecutarse en el cliente
+
 import React, { useEffect, useState } from 'react';
 
 interface ModalProps {
@@ -7,8 +7,6 @@ interface ModalProps {
 }
 
 export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
-
-  
 
   if (!isOpen) return null;
 
