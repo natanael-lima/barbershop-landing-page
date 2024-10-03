@@ -58,7 +58,7 @@ export default function Header() {
 
       {/* Contact Button */}
       <div className="hidden md:block">
-        <button onClick={openModal} className="z-10 bg-stone-800 rounded-lg hover:bg-stone-600 text-white font-semibold py-2 px-4  transition duration-300">Reserve</button>
+        <button onClick={openModal} className="bg-stone-800 rounded-lg hover:bg-stone-600 text-white font-semibold py-2 px-4  transition duration-300">Reserve</button>
 
         {/* Render the modal only if it's open */}
         {isModalOpen && (
@@ -101,12 +101,15 @@ export default function Header() {
             Contact
           </a>
           <div>
-            <a
-              href="#contact"
-              className="block bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded transition duration-300 text-center"
-            >
-              Contact Us
-            </a>
+            <button
+              onClick={openModal}
+              className="block bg-stone-800 hhover:bg-stone-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300  text-center">
+              Reserve
+            </button>
+             {/* Render the modal only if it's open */}
+              {isModalOpen && (
+              <WhatsAppForm isOpen={isModalOpen} closeModal={closeModal} />
+            )}
           </div>
         </nav>
       </div>
