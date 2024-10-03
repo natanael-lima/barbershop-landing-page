@@ -1,4 +1,4 @@
-/*"use client"; // Indica que este componente solo debe ejecutarse en el cliente
+"use client"; // Indica que este componente solo debe ejecutarse en el cliente
 import React, { useEffect, useState } from 'react';
 
 interface ModalProps {
@@ -8,49 +8,7 @@ interface ModalProps {
 
 export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    date: '',
-    time: '',
-    paymentMethod: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
   
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-  };
-
-  useEffect(() => {
-      // Verificar si estamos en el lado del cliente
-      if (typeof window !== 'undefined') {
-        // Codificar el mensaje
-        const message = `Hola, mi nombre es ${encodeURIComponent(formData.name)}.\n\n` +
-        `Mi correo es: ${encodeURIComponent(formData.email)}.\n\n` +
-        `Mi consulta es: ${encodeURIComponent(formData.message)}.\n\n` +
-        `Fecha de reserva: ${encodeURIComponent(formData.date)}.\n\n` +
-        `Hora: ${encodeURIComponent(formData.time)}.\n\n` +
-        `Método de pago: ${encodeURIComponent(formData.paymentMethod)}.`;
-
-        // Construir la URL de WhatsApp
-        const whatsappUrl = `https://wa.me/5493884670317?text=${message}`;
-
-        // Redirigir a WhatsApp chat
-        window.open(whatsappUrl, '_blank');
-        closeModal(); // Cierra el modal después de enviar
-      }
-
-  }, [formData]); // Esto asegura que el código solo se ejecute en el cliente
-    
-    
-
 
   if (!isOpen) return null;
 
@@ -72,15 +30,13 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
         </div>
 
         
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form className="space-y-4">
           <div>
             <label htmlFor="name" className="block text-gray-600 font-semibold">Nombre Completo</label>
             <input
               id="name"
               type="text"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
               className="w-full border border-gray-300 rounded-md p-2"
               placeholder="Ingresa tu nombre"
               required
@@ -92,8 +48,6 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
               id="email"
               type="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
               className="w-full border border-gray-300 rounded-md p-2"
               placeholder="Ingresa tu correo"
               required
@@ -104,8 +58,6 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
             <textarea
               id="message"
               name="message"
-              value={formData.message}
-              onChange={handleChange}
               className="w-full border border-gray-300 rounded-md p-2"
               placeholder="Escribe tu mensaje"
               rows={4}
@@ -118,8 +70,6 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
               id="date"
               type="date"
               name="date"
-              value={formData.date}
-              onChange={handleChange}
               className="w-full border border-gray-300 rounded-md p-2"
               required
             />
@@ -130,8 +80,6 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
               id="time"
               type="time"
               name="time"
-              value={formData.time}
-              onChange={handleChange}
               className="w-full border border-gray-300 rounded-md p-2"
               required
             />
@@ -141,8 +89,6 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
             <select
               id="paymentMethod"
               name="paymentMethod"
-              value={formData.paymentMethod}
-              onChange={handleChange}
               className="w-full border border-gray-300 rounded-md p-2"
               required
             >
@@ -165,7 +111,6 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
           </button>
           <button
             type="submit"
-            onClick={handleSubmit}
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
           >
             Confirmar Reserva
@@ -174,4 +119,4 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
       </div>
     </div>
   )
-}*/
+}

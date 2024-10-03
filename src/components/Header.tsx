@@ -4,7 +4,8 @@ import React, { useState } from 'react'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import { FaCut } from "react-icons/fa";
-import WhatsAppForm from './WhatsAppForm';
+import Form from './Form';
+
 
 export default function Header() {
   /*const [scrolled, setScrolled] = useState<boolean>(false);
@@ -62,7 +63,7 @@ export default function Header() {
 
         {/* Render the modal only if it's open */}
         {isModalOpen && (
-              <WhatsAppForm isOpen={isModalOpen} closeModal={closeModal} />
+              <Form isOpen={isModalOpen} closeModal={closeModal} />
             )}
       </div>
 
@@ -108,7 +109,7 @@ export default function Header() {
             </button>
              {/* Render the modal only if it's open */}
               {isModalOpen && (
-              <WhatsAppForm isOpen={isModalOpen} closeModal={closeModal} />
+              <Form isOpen={isModalOpen} closeModal={closeModal} />
             )}
           </div>
         </nav>
