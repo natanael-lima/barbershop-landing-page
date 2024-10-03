@@ -26,14 +26,14 @@ export default function Works() {
 
 
   return (
-    <div className="py-12">
+    <div className="flex flex-col items-center w-full py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             {/* First Column - Hours and Days */}
             <section className="md:w-1/3 mb-8 md:mb-0 flex flex-col">
-              <header className="text-4xl font-bold text-center mb-8">DISCOVER OUR BARBER WORKS</header>
+              <header className="tracking-tight leading-none font-bold text-6xl mb-8">DISCOVER OUR BARBER WORKS</header>
               <article className="p-6 rounded-lg flex-grow">
-                <p className='text-sm mb-4'>Transform your look with our expert barber services. From classic cuts to modern styles, we cater to all your grooming needs.</p>
+                <p className='text-md mb-4'>Transform your look with our expert barber services. From classic cuts to modern styles, we cater to all your grooming needs.</p>
               </article>
               <footer className="flex justify-start mt-4 space-x-4">
                 <button
@@ -65,7 +65,7 @@ export default function Works() {
                           <img 
                             src={service.image} 
                             alt={service.name} 
-                            className="object-cover rounded-md w-full h-72" 
+                            className="object-cover rounded-2xl w-64 h-72" 
                           />
                         </div>
                       </article>

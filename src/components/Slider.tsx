@@ -3,12 +3,12 @@ import { FaCalendar, FaClock } from 'react-icons/fa'
 import { GiPolarStar } from "react-icons/gi";
 export default function Slider() {
   return (
-    <div className="relative w-full overflow-hidden bg-stone-800 rounded-lg">
+    <div className="relative w-full overflow-hidden bg-stone-900">
       <div id="slider" className="flex items-center whitespace-nowrap animate-slide">
         {/* Slide 1 */}
-        <div className="flex-shrink-0 p-4 transition-transform duration-300 flex flex-col">
+        <div className="flex-shrink-0 p-3 transition-transform duration-300 flex flex-col">
             <div className="flex flex-col items-center hover">
-                <div className="flex items-center mb-2">
+                <div className="flex items-center ">
                 <GiPolarStar className="text-stone-200 mr-3 ml-3" />
                 <FaClock className="text-stone-200 mr-1" />
                 <h3 className="text-stone-200 font-semibold">Opening Hours</h3>
@@ -30,9 +30,9 @@ export default function Slider() {
         </div>
 
         {/* Repetir Slide 1 para efecto de infinito */}
-        <div className="flex-shrink-0 p-4 transition-transform duration-300 flex flex-col">
+        <div className="flex-shrink-0 p-3 transition-transform duration-300 flex flex-col">
             <div className="flex flex-col items-center hover">
-                <div className="flex items-center mb-2">
+                <div className="flex items-center">
                 <GiPolarStar className="text-stone-200 mr-3 ml-3" />
                 <FaClock className="text-stone-200 mr-1" />
                 <h3 className="text-stone-200 font-semibold">Opening Hours</h3>
@@ -52,9 +52,9 @@ export default function Slider() {
                 </div>
             </div>
         </div>
-        <div className="flex-shrink-0 p-4 transition-transform duration-300 flex flex-col">
+        <div className="flex-shrink-0 p-3 transition-transform duration-300 flex flex-col">
             <div className="flex flex-col items-center hover">
-                <div className="flex items-center mb-2">
+                <div className="flex items-center">
                 <GiPolarStar className="text-stone-200 mr-3 ml-3" />
                 <FaClock className="text-stone-200 mr-1" />
                 <h3 className="text-stone-200 font-semibold">Opening Hours</h3>
