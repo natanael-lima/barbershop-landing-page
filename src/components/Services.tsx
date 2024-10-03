@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaCut, FaChild, FaPaintBrush } from 'react-icons/fa'; // Importa los íconos que desees
+import { FaCut, FaPaintBrush } from 'react-icons/fa'; // Importa los íconos que desees
 import { GiBeard } from "react-icons/gi";
 import { GiRazor } from "react-icons/gi";
 import { TbMoodKidFilled } from "react-icons/tb";

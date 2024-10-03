@@ -1,10 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Image from "next/image";
-
-import Service from "@/components/Works";
-import Team from "@/components/Team";
 import About from "@/components/About";
 import Slider from "@/components/Slider";
 import Contact from "@/components/Contact";

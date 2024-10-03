@@ -1,6 +1,5 @@
 import React from 'react'
 import { FaCalendar, FaClock } from 'react-icons/fa'
-import { TbPointFilled } from "react-icons/tb";
 import { GiPolarStar } from "react-icons/gi";
 export default function Slider() {
   return (
