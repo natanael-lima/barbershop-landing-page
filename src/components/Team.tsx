@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { AiOutlineInstagram } from "react-icons/ai";
 // Sample data for team members
 const teamMembers = [
   {
@@ -55,20 +56,21 @@ export default function Team() {
               />
 
               {/* Íconos de redes sociales en la parte inferior centrados sobre la imagen */}
-              <div className="absolute top-0 left-0 w-full flex justify-center space-x-3 p-2">
-                <a href={member.social1} target="_blank" rel="noopener noreferrer" className="bg-stone-200 hover:bg-stone-300 p-1 rounded-md text-stone-700  transition-colors">
+              <div className="absolute top-0 left-0 w-full flex flex-col justify-end items-end space-y-3 p-2">
+                <a href={member.social1} target="_blank" rel="noopener noreferrer" className="bg-stone-700 hover:bg-stone-600 p-1 rounded-md text-stone-300 transition-colors">
                   {/* Icono de Facebook */}
                   <i>
-                    <FaFacebookF size={16} />
+                    <FaFacebookF size={18} />
                   </i>
                 </a>
-                <a href={member.social2} target="_blank" rel="noopener noreferrer" className="bg-stone-200 hover:bg-stone-300 p-1 rounded-md text-stone-700  transition-colors">
+                <a href={member.social2} target="_blank" rel="noopener noreferrer" className="bg-stone-700 hover:bg-stone-600 p-1 rounded-md text-stone-300 transition-colors">
                   {/* Icono de Instagram */}
                   <i>
-                    <FaInstagram size={16} />
+                    <AiOutlineInstagram size={18} />
                   </i>
                 </a>
               </div>
+
 
               {/* Nombre y descripción debajo de la imagen y centrado */}
               <div className="mt-1 text-center">
