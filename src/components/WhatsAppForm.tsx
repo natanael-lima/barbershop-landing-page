@@ -24,17 +24,18 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
   };
   
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     
     // Verificar si estamos en el lado del cliente
     if (typeof window !== 'undefined') {
       // Codificar el mensaje
-      const message = `Hola, mi nombre es ${encodeURIComponent(formData.name)}. Mi correo es ${encodeURIComponent(formData.email)}. 
-      Mi consulta es: ${encodeURIComponent(formData.message)}. 
-      Fecha de reserva: ${encodeURIComponent(formData.date)}, 
-      Hora: ${encodeURIComponent(formData.time)}, 
-      Método de pago: ${encodeURIComponent(formData.paymentMethod)}`;
+      const message = `Hola, mi nombre es ${encodeURIComponent(formData.name)}.\n\n` +
+      `Mi correo es: ${encodeURIComponent(formData.email)}.\n\n` +
+      `Mi consulta es: ${encodeURIComponent(formData.message)}.\n\n` +
+      `Fecha de reserva: ${encodeURIComponent(formData.date)}.\n\n` +
+      `Hora: ${encodeURIComponent(formData.time)}.\n\n` +
+      `Método de pago: ${encodeURIComponent(formData.paymentMethod)}.`;
 
       // Construir la URL de WhatsApp
       const whatsappUrl = `https://wa.me/5493884670317?text=${message}`;
