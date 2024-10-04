@@ -9,7 +9,7 @@ const services = [
   { id: 2,image:"https://i.pinimg.com/474x/02/56/8f/02568f19e090212ed519c25662c2a7d7.jpg", name: 'Beard Trim' },
   { id: 3,image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTAh4HzRh1WV4MRvz5cb0Cws7Pyz3WSV2e9w&s", name: 'Hair Coloring'},
   { id: 4,image:"https://www.altacapacitacion.com/product_images/cursos-en-acp/trabajo/2__80798_thumb.jpg",name: 'Shave'},
-  { id: 5,image:"https://ganiveteriacasalama.com/wp-content/uploads/2021/10/IMG-20211004-WA0010-300x300.jpg", name: 'Hair Styling'},
+  { id: 5,image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Tg1A-Fnq1Qod6Scqz9q8yiOX8cJLDJbgHQ&s", name: 'Hair Styling'},
   { id: 6,image:"https://haircutday.com/b/wp-content/uploads/2024/01/Diseno-sin-titulo32-300x300.png", name: 'Kids Haircut'},
 ]
 
@@ -31,8 +31,8 @@ export default function Works() {
           <div className="flex flex-col md:flex-row">
             {/* First Column - Hours and Days */}
             <section className="md:w-1/3 mb-8 md:mb-0 flex flex-col">
-              <header className="tracking-tight leading-none font-bold text-6xl mb-8">DISCOVER OUR BARBER WORKS</header>
-              <article className="p-6 rounded-lg flex-grow">
+              <header className="tracking-tight leading-none font-bold text-6xl mb-8 text-stone-900">DISCOVER OUR BARBER WORKS</header>
+              <article className="rounded-lg flex-grow">
                 <p className='text-md mb-4'>Transform your look with our expert barber services. From classic cuts to modern styles, we cater to all your grooming needs.</p>
               </article>
               <footer className="flex justify-start mt-4 space-x-4">

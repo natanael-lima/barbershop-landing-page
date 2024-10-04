@@ -24,11 +24,6 @@ export default function Header() {
     element?.scrollIntoView({ behavior: 'smooth' });
   };*/
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-  
 
   return (
     <header className="absolute top-0 left-0 w-full text-black bg-transparent rounded-lg z-10">
@@ -58,13 +53,9 @@ export default function Header() {
 
         {/* Contact Button */}
         <div className="hidden md:block">
-          <button onClick={openModal} className="bg-stone-300 rounded-lg hover:bg-stone-200 text-stone-800 font-semibold py-2 px-4 transition duration-300">
-            Reserve
+          <button className="bg-stone-300 rounded-lg hover:bg-stone-200 text-stone-800 font-semibold py-2 px-4 transition duration-300">
+            Contact us
           </button>
-          {/* Render the modal only if it's open */}
-          {isModalOpen && (
-            <Form isOpen={isModalOpen} closeModal={closeModal} />
-          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -93,22 +84,17 @@ export default function Header() {
                 Services
               </a>
               <a href="#team" className="flex items-center text-stone-200 hover:text-stone-300">
-                Team
+                Works
               </a>
               <a href="#gallery" className="flex items-center text-stone-200 hover:text-stone-300">
                 About
               </a>
               <div>
                 <button
-                  onClick={openModal}
                   className="block bg-stone-200 hover:bg-stone-300 text-stone-800 font-semibold py-2 px-4 rounded-lg transition duration-300 text-center"
                 >
-                  Reserve
+                Contact us
                 </button>
-                  {/* Render the modal only if it's open */}
-                  {isModalOpen && (
-                    <Form isOpen={isModalOpen} closeModal={closeModal} />
-                  )}
               </div>
             </nav>
         </div>

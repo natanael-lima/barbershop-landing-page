@@ -10,7 +10,7 @@ export default function About() {
           <img src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png" alt="Barbershop image" loading="lazy" width="" height=""/>
         </div>
         <div className="md:7/12 lg:w-6/12">
-          <h2 className="text-4xl font-bold text-center mb-8">ABOUT US</h2>
+        <h2 className="tracking-tight leading-none font-bold text-6xl text-stone-900">ABOUT US</h2>
           <p className="mt-6 text-gray-600">At <strong>FlowN</strong>, we believe a great look starts with a great haircut. We are a modern barbershop with a classic touch, dedicated to providing you with a high-quality experience where every detail matters. Our team of professional barbers is committed to delivering precise cuts, unique styles, and personalized service that fits your style and personality.</p>
           <Team/>
         </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { AiOutlineInstagram } from "react-icons/ai";
-import { FaLinkedin } from "react-icons/fa";
+import { IoLogoLinkedin } from "react-icons/io";
+import { RiInstagramFill } from "react-icons/ri";
 // Sample data for team members
 const teamMembers = [
   {
@@ -41,33 +41,33 @@ const teamMembers = [
 export default function Team() {
   return (
     <section className="w-full py-10">
-      <h2 className="text-4xl font-bold text-center mb-8">OUR TEAM</h2>
+      <h2 className="text-2xl font-bold text-start mb-8">OUR TEAM</h2>
       <div className='w-full'>
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center">
         {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="relative rounded-2xl overflow-hidden w-44 "
+              className="relative rounded-2xl overflow-hidden"
             >
               {/* Imagen del miembro */}
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-56 object-cover opacity-80 transition-opacity duration-300 hover:opacity-100"
+                className="w-full h-40 object-cover opacity-80 transition-opacity duration-300 hover:opacity-100"
               />
 
               {/* Íconos de redes sociales en la parte inferior centrados sobre la imagen */}
               <div className="absolute top-0 left-0 w-full flex flex-col justify-end items-end space-y-1 p-2">
-                <a href={member.social1} target="_blank" rel="noopener noreferrer" className="p-1 rounded-md text-stone-700 hover:text-stone-900 transition-colors">
+                <a href={member.social1} target="_blank" rel="noopener noreferrer" className="p-1 rounded-md text-stone-100 hover:text-stone-200 transition-colors">
                   {/* Icono de Facebook */}
                   <i>
-                    <FaLinkedin size={18} />
+                    <IoLogoLinkedin size={18} />
                   </i>
                 </a>
-                <a href={member.social2} target="_blank" rel="noopener noreferrer" className="p-1 rounded-md text-stone-700 hover:text-stone-900 transition-colors">
+                <a href={member.social2} target="_blank" rel="noopener noreferrer" className="p-1 rounded-md text-stone-100 hover:text-stone-200 transition-colors">
                   {/* Icono de Instagram */}
                   <i>
-                    <AiOutlineInstagram size={18} />
+                    <RiInstagramFill size={18} />
                   </i>
                 </a>
               </div>
