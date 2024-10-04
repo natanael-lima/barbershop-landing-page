@@ -26,7 +26,7 @@ export default function Works() {
 
 
   return (
-    <div className="flex flex-col items-center w-full py-12">
+    <div id="work" className="flex flex-col items-center w-full py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
             {/* First Column - Hours and Days */}

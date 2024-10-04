@@ -10,7 +10,6 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
 
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     message: '',
     date: '',
     time: '',
@@ -30,7 +29,6 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
      if (typeof window !== 'undefined') {
       // Codificar el mensaje
       const message = `Hola, mi nombre es ${encodeURIComponent(formData.name)}.\n\n` +
-      `Mi correo es: ${encodeURIComponent(formData.email)}.\n\n` +
       `Mi consulta es: ${encodeURIComponent(formData.message)}.\n\n` +
       `Fecha de reserva: ${encodeURIComponent(formData.date)}.\n\n` +
       `Hora: ${encodeURIComponent(formData.time)}.\n\n` +
@@ -76,19 +74,6 @@ export default function WhatsAppForm({ closeModal, isOpen }: ModalProps) {
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-md p-2"
               placeholder="Ingresa tu nombre"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="email" className="block text-gray-600 font-semibold">Correo Electrónico</label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full border border-gray-300 rounded-md p-2"
-              placeholder="Ingresa tu correo"
               required
             />
           </div>

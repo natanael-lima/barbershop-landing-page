@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import { FaCut } from "react-icons/fa";
@@ -8,7 +8,8 @@ import Form from './WhatsAppForm';
 
 
 export default function Header() {
-  /*const [scrolled, setScrolled] = useState<boolean>(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,8 +23,9 @@ export default function Header() {
   const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
-  };*/
-  const [menuOpen, setMenuOpen] = useState(false);
+  };
+
+  
 
   return (
     <header className="absolute top-0 left-0 w-full text-black bg-transparent rounded-lg z-10">
@@ -37,16 +39,16 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 border p-4 border-white rounded-lg">
-          <a href="#home" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] text-stone-300 after:bg-stone-200 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-200">
+          <a onClick={() => scrollToSection('home')} className="cursor-pointer relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] text-stone-300 after:bg-stone-200 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-200">
             Home
           </a>
-          <a href="#services" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] text-stone-300 after:bg-stone-200 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-200">
+          <a onClick={() => scrollToSection('service')} className="cursor-pointer relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] text-stone-300 after:bg-stone-200 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-200">
             Services
           </a>
-          <a href="#team" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] text-stone-300 after:bg-stone-200 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-200">
+          <a onClick={() => scrollToSection('work')} className="cursor-pointer relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] text-stone-300 after:bg-stone-200 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-200">
             Works
           </a>
-          <a href="#gallery" className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] text-stone-300 after:bg-stone-200 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-200">
+          <a  onClick={() => scrollToSection('about')} className="cursor-pointer relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] text-stone-300 after:bg-stone-200 after:transition-all after:duration-300 hover:after:w-full hover:text-stone-200">
             About us
           </a>
         </nav>
@@ -77,16 +79,16 @@ export default function Header() {
       {menuOpen && (
         <div className="md:hidden text-black">
           <nav className="flex flex-col space-y-4 py-4 px-4 bg-stone-950">
-              <a href="#home" className="flex items-center text-stone-200 hover:text-stone-300">
+              <a onClick={() => scrollToSection('home')} className="flex items-center text-stone-200 hover:text-stone-300">
                 Home
               </a>
-              <a href="#services" className="flex items-center text-stone-200 hover:text-stone-300">
+              <a onClick={() => scrollToSection('service')} className="flex items-center text-stone-200 hover:text-stone-300">
                 Services
               </a>
-              <a href="#team" className="flex items-center text-stone-200 hover:text-stone-300">
+              <a onClick={() => scrollToSection('work')} className="flex items-center text-stone-200 hover:text-stone-300">
                 Works
               </a>
-              <a href="#gallery" className="flex items-center text-stone-200 hover:text-stone-300">
+              <a onClick={() => scrollToSection('about')} className="flex items-center text-stone-200 hover:text-stone-300">
                 About
               </a>
               <div>

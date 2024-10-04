@@ -42,11 +42,11 @@ export default function Services() {
   const closeModalService = () => { setIsModalOpenService(false);};
 
   return (
-    <section className="py-16 flex flex-col items-center w-full">
+    <section id="service" className="py-16 flex flex-col items-center w-full">
       <div className="container mx-auto px-6 text-stone-600 md:px-12 xl:px-6">
-        <div className="flex flex-col md:flex-row md:gap-6 lg:items-start lg:gap-12">
+        <div className="flex flex-col  md:flex-row md:gap-6 lg:items-start lg:gap-10">
           {/* Columna 1: Servicios */}
-          <div className="w-full md:w-7/10 flex flex-col items-start">
+          <div className="w-full md:lg:w-2/3 flex flex-col items-start">
             {/* Contenedor principal de los servicios */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {services.map((service, index) => (
@@ -70,37 +70,31 @@ export default function Services() {
           </div>
 
           {/* Columna 2: Información General */}
-          <div className="w-full md:w-3/10 flex flex-col items-center justify-between h-64 px-4">
-              <h2 className="tracking-tight leading-none font-bold text-6xl text-stone-900">SERVICES AND QUALITY HAIR</h2>
-              
-              <a
-                href="#view-all-services"
-                onClick={openModalService} // Abre el modal al hacer clic
-                className="text-blue-600 hover:underline"
-              >
-                View all services
-              </a>
-              
-              {/* Render the modal only if está abierto */}
-              {isModalOpenService && (
-                <ServicesModal isOpen={isModalOpenService} closeModal={closeModalService} />
-              )}
-              
-              <button onClick={openModal} className="bg-stone-800 text-white py-2 px-4 rounded-lg hover:bg-stone-600 transition duration-300">
-                Book an Appointment
-              </button>
-              
-              {/* Render the modal only if está abierto */}
-              {isModalOpen && (
-                <WhatsAppForm isOpen={isModalOpen} closeModal={closeModal} />
-              )}
-            </div>
+          <div className="order-2 md:order-1 w-full md:w-1/4 flex flex-col items-center justify-center md:justify-start px-4 py-4 md:py-0">
+            <h2 className="tracking-tight leading-none font-bold text-6xl text-stone-900 text-center">QUALITY SERVICES FOR YOUR HAIR</h2>
+            <a
+              href="#view-all-services"
+              onClick={openModalService}
+              className="text-blue-600 hover:underline my-4"
+            >
+              View all services
+            </a>
+            {isModalOpenService && (
+              <ServicesModal isOpen={isModalOpenService} closeModal={closeModalService} />
+            )}
+            <button
+              onClick={openModal}
+              className="bg-stone-800 text-white py-2 px-4 rounded-lg hover:bg-stone-600 transition duration-300 mt-4"
+            >
+              Book an Appointment
+            </button>
+            {isModalOpen && (
+              <WhatsAppForm isOpen={isModalOpen} closeModal={closeModal} />
+            )}
+          </div>
 
         </div>
       </div>
     </section>
-
-
-    
   )
 }

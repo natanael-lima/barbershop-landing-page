@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Contact() {
   return (
-      <section className="flex flex-col items-center w-full p-2">
+      <section id="contact" className="flex flex-col items-center w-full p-2">
           <h2 className="tracking-tight leading-none font-bold text-6xl text-stone-900">CONTACT US</h2>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-16">
               {/* Google Maps Location */}
