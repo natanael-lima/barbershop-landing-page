@@ -70,8 +70,8 @@ export default function Services() {
           </div>
 
           {/* Columna 2: Información General */}
-          <div className="order-2 md:order-1 w-full md:w-1/4 flex flex-col items-center justify-center md:justify-start px-4 py-4 md:py-0">
-            <h2 className="tracking-tight leading-none font-bold text-6xl text-stone-900 text-center">QUALITY SERVICES FOR YOUR HAIR</h2>
+          <div className="order-2 md:order-1 w-full md:w-1/3 flex flex-col items-end  justify-end md:justify-start px-4 py-4 md:py-20">
+            <h2 className="racking-tight leading-none font-bold text-6xl mb-8 text-stone-900 text-end">QUALITY SERVICES FOR YOUR HAIR</h2>
             <a
               href="#view-all-services"
               onClick={openModalService}
